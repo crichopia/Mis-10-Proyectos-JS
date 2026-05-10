@@ -1,0 +1,648 @@
+
+body{
+    background-color:    #d4e0ff;
+    display:                  flex;
+    flex-direction:         column;
+    align-items:            center;
+    justify-content:        center;
+    font-family: Arial, sans-serif;
+    box-sizing:         border-box;
+    margin:                      0;
+    padding:                     0;
+}
+
+header{
+    background: linear-gradient(135deg, rgb(184, 134, 237), rgb(106, 79, 195) );
+    display:            flex;
+    flex-direction:   column;
+    align-items:      center;
+    justify-content:  center;
+    padding:            20px;
+    width:              100%;
+    box-sizing:   border-box;
+}
+
+header h1{
+    color:      white;
+    font-size:   2.5rem;
+    text-align:  center;
+    margin:           0;
+
+}
+
+header h2{
+    color:      white;
+    font-size:   1.5rem;
+    text-align:  center;
+    margin:           0;
+    margin-top:    10px;
+}
+
+header p{
+    color:      white;
+    font-size:   1.5rem;
+    text-align:  center;
+    margin:           0;
+    margin-top:    10px;
+    cursor:     pointer;
+    font-weight:   bold;
+}
+
+header p:hover{
+    color: #4e5274;
+}
+
+main{
+    display:                  flex;
+    flex-direction:         column;
+    align-items:            center;
+    justify-content:        center;
+    min-height:              100vh;
+}
+
+section{
+    background-color:    #acd8ff;
+    box-shadow: 0px 0px 20px rgb(88, 114, 192);
+    border:    2px solid #777ece;    
+    min-height:              200px;
+    display:                  flex;
+    flex-direction:         column;
+    align-items:            center;
+    justify-content:        center;
+
+    width:                    85vw;
+    padding:                  20px;
+    border-radius:            20px;
+    margin-top:               20px;
+    margin-bottom:            20px;
+
+}
+
+footer{
+    background: linear-gradient(135deg, rgb(184, 134, 237), rgb(106, 79, 195) );
+
+    display:            flex;
+    align-items:      center;
+    justify-content:  center;
+    width:              100%;
+    height:            100px;
+    box-sizing:   border-box;
+
+}
+
+footer a{
+    color: rgb(68, 1, 82);
+}
+/* inicio */
+
+#inicio_container{
+
+    padding:           20px;
+    display:           flex;
+    flex-direction:  column;
+    align-items:     center;
+    justify-content: center;
+
+
+}
+
+
+
+#inicio p{
+    font-size:         18px;
+    margin-right:       5vw;
+
+}
+
+#textoEImagenDelInicio img{
+
+    height: 25vw;
+    width:  25vw;
+    
+}
+
+#textoEImagenDelInicio{
+
+    display:           flex;
+    flex-direction:     row;
+    align-items:     center;
+    justify-content: center;
+    gap:               20px;
+    margin-left:        5vw;
+    margin-right:       5vw;
+
+
+}
+
+/* contador interactivo */
+
+#contador_interactivo h2{
+    margin: 0;
+}
+
+#contador_interactivo {
+
+    padding-top:   10vw ;
+    padding-bottom:10vw ;
+
+}
+
+
+#contador{
+
+    font-size:     40px;
+    margin-top:     2vw;
+    margin-bottom:  2vw;
+}
+
+#botones_contador{
+    display:           flex;
+    align-items:     center;
+    justify-content: center;
+    gap:               40px;
+}
+
+#contador_interactivo button{
+    color:     white;
+    border:       none;
+    padding: 15px 30px;
+    font-size:    16px;
+    cursor:    pointer;
+    border-radius: 5px;
+}
+
+#boton-sumar{
+    background-color: #4CAF50;
+}
+
+#boton-restar{
+    background-color: #f44336;
+}
+
+#boton-reset{
+    background-color: #777ece;
+}
+
+/* lista de tareas */
+
+#lista_de_tareas{
+    padding-bottom:40px ;
+}
+
+#lista_de_tareas button{
+    cursor:             pointer;    
+    color:              white;
+    background-color: #777ece;
+    border:                none;
+    border-radius:          5px;
+}
+
+#lista_de_tareas button:hover{
+    background-color: #5b619d;
+}
+
+/* adivinar numero */
+
+#numero_misterioso{
+    font-size:     40px;
+    margin-top:     2vw;
+    margin-bottom:  2vw;
+}
+
+#numero_de_intentos{
+
+    display:             flex;
+    align-items:       center;
+    justify-content:   center;
+    gap:                 20px;
+}
+
+#contador_intentos{
+    font-size:     20px;
+    font-weight:   bold;
+}
+
+#adivinar_numero button{
+    cursor:             pointer;    
+    color:              white;
+    background-color: #777ece;
+    border:                none;
+    border-radius:          5px;
+}
+
+#adivinar_numero button:hover{
+    background-color: #5b619d;
+}
+
+/* Calculadora */
+
+#cuerpo_calculadora{
+
+    background: linear-gradient(135deg, rgb(184, 134, 237), rgb(106, 79, 195) );
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+#display_calculadora{
+    background-color: #46734a;
+    color:            #142916;
+    font-size:             24px;
+    padding:               10px;
+    text-align:            left;
+    border-radius:          5px;
+    margin-bottom:         10px;
+}
+
+.fila_de_botones_calculadora{
+
+    display:        grid;
+    margin-bottom:   5px;
+    gap:             5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.boton_calculadora{
+    padding:               15px;
+    font-size:             18px;
+    border:                none;
+    border-radius:          5px;
+    color:              white;
+    cursor:             pointer;    
+    background-color: #9ea6fd;
+}
+.boton_calculadora:hover{
+    background-color: #878ed7;
+}
+
+/* generar color */
+
+#codigo_hex{
+    color:    #373737;
+    font-size:     40px;
+    margin-top:     2vw;
+    margin-bottom:  3vw;
+}
+
+#botones_cambia_colores{
+    display:           flex;
+    align-items:     center;
+    justify-content: center;
+    gap:               20px;
+}
+
+#cambia_colores button{
+    color:              white;
+    background-color: #777ece;
+    border:                none;
+    padding:          10px 30px;
+    font-size:             16px;
+    cursor:             pointer;
+    border-radius:          5px;
+}
+
+#botones_cambia_colores button:hover{
+    background-color: #5b619d;
+}
+
+/* temporizador */
+
+#tiempo{
+    background-color:        #46734a;
+    border:        2px solid #254c29;
+    color:                   #142916;
+    border-radius:                 5px;
+    margin-bottom:                10px;
+    padding:                       5px;
+    font-size:                    40px;
+    margin-top:                    2vw;
+    margin-bottom:                 3vw;
+    display:                      grid;
+    place-items:                center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#display_temporizador{
+    display:               flex;
+    flex-direction:         row;
+    align-items:         center;
+    justify-content:     center;
+}
+
+#display_temporizador button{
+    color:              white;
+    background-color: #777ece;
+    border:                none;
+    margin-left:            5px;
+    margin-right:           5px;
+    padding:          10px 20px;
+    font-size:             16px;
+    cursor:             pointer;
+    border-radius:          5px;
+}
+
+#display_temporizador button:hover{
+    background-color: #5b619d;
+}
+
+#botones_temporizador{
+    display:           flex;
+    align-items:     center;
+    justify-content: center;
+    margin:             0px;
+    gap:                12px;
+}
+
+#botones_temporizador button{
+    color:              white;
+    border:                none;
+    padding:          10px 30px;
+    font-size:             16px;
+    cursor:             pointer;
+    border-radius:          5px;
+
+}
+#boton_iniciar_temporizador{
+    background-color: #4CAF50;
+}
+
+#boton_pausar_temporizador{
+    background-color: #f44336;
+}
+
+#boton_reiniciar_temporizador{
+    background-color: #777ece;
+}
+
+/* Generador de Contraseñas */
+
+#contraseña_generada{
+    font-size:     25px;
+    margin-top:     2vw;
+    margin-bottom:  3vw;
+}
+
+#contenedor_cosas_contraseña{
+
+    display:                  grid;
+    grid-template-columns: 1fr 1fr;
+    place-items:              left;
+    margin:                    0px;
+    gap:                       5px;
+
+}
+
+.checkbox_contraseña{
+    display:                  grid;
+    grid-template-columns: 1fr 1fr;
+    place-items:              left;
+    margin:                    0px;
+    margin-bottom:             5px;
+    font-size:                16px;
+}
+
+.checkbox_contraseña input{
+    margin:0px;
+}
+
+#selector_longitud_contraseña{
+    display:                  flex;
+    align-items:            center;
+    gap:                       5px;
+    margin-bottom:             5px;
+}
+
+#contenedor_cosas_contraseña button{
+    background-color: #777ece;
+    color:              white;
+    border:                none;
+    padding:           5px 10px;
+    font-size:             16px;
+    cursor:             pointer;
+    border-radius:          5px;
+}
+
+#contenedor_cosas_contraseña button:hover{
+    background-color: #5b619d;
+
+}
+
+#botones_contraseña{
+
+    display:                grid;
+    grid-template-rows: 1fr 1fr ;
+    place-items:          center;
+    gap:                     5px;
+}
+
+/* modo oscuro */
+
+#modo_oscuro button{
+    background-color: #777ece;
+    color:              white;
+    border:                none;
+    padding:          10px 10px;
+    font-size:             50px;
+    cursor:             pointer;
+    border-radius:        100px;
+}
+
+#modo_oscuro button:hover{
+    background-color: #5b619d;
+
+}
+
+/* //piedra papel o tijera */
+
+#botones_piedra_papel_tijera button{
+    background-color: #777ece;
+    color:              white;
+    border:                none;
+    padding:          10px 20px;
+    font-size:             25px;
+    cursor:             pointer;
+    border-radius:         10px;
+}
+
+#piedra_papel_tijera button:hover{
+    background-color: #5b619d;
+}
+
+#cpu_piedra_papel_tijera{
+    font-size:     50px;
+    margin:        10px;
+    margin-bottom: 20px;
+
+}
+#piedra_papel_tijera p{
+    font-size:     25px;
+    margin:        10px;
+}
+
+#marcador{
+    display:                  flex;
+    align-items:            center;
+    gap:                      20px;
+    font-size:                20px;
+}
+
+#reiniciar_marcador{
+    font-size:             20px;
+    color:              white;
+    background-color: #777ece;
+    border:                none;
+    padding:           5px 10px;
+    cursor:             pointer;
+    border-radius:          5px;
+    margin:                 5px;
+}
+
+/* modales */
+
+.overlay {
+    position:                  fixed;
+    top:                           0;
+    bottom:                        0;
+    left:                          0;
+    right:                         0;
+    width:                      100%;
+    height:                     100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter:       blur(3px);
+    z-index:                       1;
+}
+
+.modal {
+    z-index:      2;
+    position: fixed;
+    width:     60vw;
+    top:         5%;
+}
+
+.modal button{
+    /* font-size:             20px; */
+    color:              white;
+    background-color: #777ece;
+    border:                none;
+    padding:           5px 10px;
+    cursor:             pointer;
+    border-radius:          5px;
+    margin:                 5px;
+}
+
+.modal .buttonX{
+    background-color: #777ece;
+    color:              white;
+    border:                none;
+    font-size:             16px;
+    cursor:             pointer;
+    height:                40px;
+    width:                 40px;
+    border-radius:          50%;
+    position:          absolute;
+    top:                   10px;
+    right:                 30px;
+}
+
+
+.modal button:hover{
+    background-color: #5b619d;
+}
+
+.hidden {
+    display: none;
+}
+
+/* galeria de imagenes */
+
+#galeria_de_imagenes{
+    display:                  grid;
+    grid-template-columns: 1fr 2fr;
+    gap:                      10px;
+    place-items:            center;
+}
+
+#galeria_de_imagenes nav{
+    display:                                  flex;
+    flex-direction:                         column;
+    align-items:                            center;
+    gap:                                      10px;
+    height:                                    85%;
+    background-color:                    #777ece;
+    border:                    2px solid #4f5488;
+    padding:                                   5px;
+    padding-top:                              20px;
+    padding-bottom:                           10px;
+    border-radius:                            10px;
+    margin-top:                                0px;
+}
+
+#galeria_de_imagenes nav p{
+    color:              white;
+    text-decoration:       none;
+    font-size:             18px;
+    margin:                   0;
+    margin-bottom:          5px;
+    cursor:             pointer;    
+}
+
+#galeria_de_imagenes nav hr{
+    width:                  95%;
+    border: 1px solid #2e3260;
+
+}
+
+
+#filtro_busqueda_img{
+    display:                  grid;
+    grid-template-columns: 2fr 1fr;
+    gap:                      10px;
+    margin-bottom:            10px;
+    margin-top:               20px;
+}
+
+.galeria{
+    display:                      grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items:                center;
+    gap:                          20px;
+}
+
+#galeria_de_imagenes img{
+    width:         10vw;
+    height:        10vw;
+    border-radius: 10px;
+}
+
+#galeria_de_imagenes img:hover{
+box-shadow: 0px 0px 10px rgb(88, 114, 192);
+}
+
+/*modal galeria*/
+
+.modal img{
+
+    width:         30vw;
+    height:        30vw;
+    margin-top:    30px;
+    border-radius: 10px;
+
+}
+
+/* modal menu */
+
+#modal_menu_container{
+    display: grid;
+    width: 55vw;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+}
+.boton_menu{
+    width: 27vw;
+    height: 65px;
+    margin: 0px;
+    font-size: 18px;
+}
+

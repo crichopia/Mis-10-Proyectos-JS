@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 10 Proyectos JS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    
+    <header>
+        <h1>“El Reto de los 10 Proyectos de JavaScript”</h1>
+        <h2>-Hecho por David Méndez-</h2>
+        <p onclick="abrirModalMenu()"> [ Menu ] </p>
+    </header>
+
+    <main>
+
+<!-- --------------------------------------------------------------- -->
+<!-- inicio -->
+        <section id="inicio" class="seccion">
+            
+            <div id="inicio_container">
+                <h2>¡Bienvenido al desafío de los 10 proyectos de JavaScript!</h2>
+                <div id="textoEImagenDelInicio">
+                    <p>En este proyecto se encuentran 10 proyectos basicos de javascript listos para ser probados.
+                    Pulsa en el boton de menu que esta debajo del header para acceder a el menu de seleccion de proyectos.</p>
+                    <img src="jsmorado.png" alt="">
+                </div>
+
+            </div>
+        </section>
+
+<!-- --------------------------------------------------------------- -->
+<!-- contador -->
+        <section id="contador_interactivo" class="seccion hidden">
+
+        <h2>Contador</h2>
+        
+        <div id = "contador">0</div>
+        
+        <div id = "botonesContador">
+            <button id = "boton-restar" onclick = "restar()">-1</button>
+            <button id = "boton-reset" onclick ="resetear()">Resetear</button>
+            <button id = "boton-sumar" onclick ="sumar()">+1</button>
+        </div>
+
+        </section>
+<!-- ------------------------------------------------------------------------------ -->
+<!-- lista de tareas -->
+        <section id="lista_de_tareas" class="seccion hidden">
+            
+            <div>
+                <input type="text" id="input_lista" placeholder="Escribe algo...">
+                <button id="boton_agregar" onclick="agregarElemento()">Agregar a la lista</button>
+            </div>
+        
+            <ul id="lista"></ul>
+        
+        </section>
+<!-- ------------------------------------------------------------------------------ -->
+<!-- adivina canalla -->
+        <section id="adivinar_numero" class="seccion hidden">
+
+            <h2>Adivina el numero</h2>
+            <div id = "numero_misterioso">?</div>
+            
+            <div id = "numero_de_intentos">
+                <h3>Numero de intentos</h3>
+                <div id="contador_intentos">0</div>
+            </div>
+            
+            <div>
+                <button id="boton_reiniciar" onclick="reiniciarJuego()">Reiniciar</button>
+                <input type="number" id="input_numero" placeholder="Escribe un numero...">
+                <button id="boton_verificar" onclick="verificarNumero()">Adivinar</button>
+            </div>
+        </section>
+
+<!-- ------------------------------------------------------------------------------ -->
+<!-- calculadora -->
+        <section id="calculadora" class="seccion hidden">
+
+            <div id="cuerpo_calculadora">
+
+                <div id="display_calculadora">_</div>
+                
+                <div class="fila_de_botones_calculadora">
+                    <button class="boton_calculadora" onclick="agregarNumero('1')">1</button>
+                    <button class="boton_calculadora" onclick="agregarNumero('2')">2</button>
+                    <button class="boton_calculadora" onclick="agregarNumero('3')">3</button>
+                    <button class="boton_calculadora" onclick="agregarOperacion('/')">/</button>
+                </div>
+                <div class="fila_de_botones_calculadora">
+                    <button class="boton_calculadora" onclick="agregarNumero('4')">4</button>
+                    <button class="boton_calculadora" onclick="agregarNumero('5')">5</button>
+                    <button class="boton_calculadora" onclick="agregarNumero('6')">6</button>
+                    <button class="boton_calculadora" onclick="agregarOperacion('*')">X</button>
+                </div>
+                <div class="fila_de_botones_calculadora">
+                    <button class="boton_calculadora" onclick="agregarNumero('7')">7</button>
+                    <button class="boton_calculadora" onclick="agregarNumero('8')">8</button>
+                    <button class="boton_calculadora" onclick="agregarNumero('9')">9</button>
+                    <button class="boton_calculadora" onclick="agregarOperacion('-')">-</button>
+                </div>
+                <div class="fila_de_botones_calculadora">
+                    <button class="boton_calculadora" onclick="agregarNumero('0')">0</button>
+                    <button class="boton_calculadora" onclick="calcularResultado()">=</button>
+                    <button class="boton_calculadora" onclick="limpiarDisplay()">C</button>
+                    <button class="boton_calculadora" onclick="agregarOperacion('+')">+</button>
+
+                </div>
+            </div>
+
+        </section>
+<!-- ------------------------------------------------------------------------------ -->
+<!-- cambiador de colores -->
+        <section id="cambia_colores" class="seccion hidden">
+
+            <h2>Cambiador de Colores</h2>
+            <div id = "codigo_hex">#</div>
+
+            <div id = "botones_cambia_colores">
+                <button onclick="generarColor()">Generar <br>color</button>
+                <button onclick="copiarColor()">Copiar <br>color</button>
+                <button onclick="reiniciarColor()">Reiniciar <br>color</button>
+
+            </div>
+        </section>            
+
+<!-- ------------------------------------------------------------------------------ -->
+<!-- temporizador -->
+
+        <section id="temporizador" class="seccion hidden">
+
+            <div id="display_temporizador">
+                <button onclick="sumarMinutos()">+</button>
+                <button onclick="restarMinutos()">-</button>
+                
+                <div id="tiempo">
+                    <div id="minutos">00</div>
+                    <div>:</div>
+                    <div id="segundos">00</div>
+                </div>
+                
+                <button onclick="sumarSegundos()">+</button>
+                <button onclick="restarSegundos()">-</button>
+            </div>
+
+            <div id="botones_temporizador">
+                <button id="boton_iniciar_temporizador" onclick="iniciarTemporizador()">Iniciar</button>
+                <button id="boton_pausar_temporizador" onclick="pausarTemporizador()">Pausar</button>
+                <button id="boton_reiniciar_temporizador" onclick="reiniciarTemporizador()">Reiniciar</button>
+
+            </div>
+        </section>
+
+<!-- ------------------------------------------------------------------------------ -->
+<!-- generador de contraseñas -->
+        <section id="generador_de_contraseñas" class="seccion hidden">
+
+                <div id="contraseña_generada">0</div>
+
+                    <!-- a partir de aqui solo son checkboxes -->
+                <div id="contenedor_cosas_contraseña">
+                    <div>
+                        <div class="checkbox_contraseña">
+                            <label for="incluir_mayusculas">Mayúsculas</label>
+                            <input type="checkbox" id="incluir_mayusculas">
+                        </div>
+
+                        <div class="checkbox_contraseña">
+                            <label for="incluir_minusculas">Minusculas</label>
+                            <input type="checkbox" id="incluir_minusculas">
+                        </div>
+
+                        <div class="checkbox_contraseña">
+                            <label for="incluir_numeros">Numeros</label>
+                            <input type="checkbox" id="incluir_numeros">
+                        </div>
+
+                        <div class="checkbox_contraseña">
+                            <label for="incluir_simbolos">Simbolos</label>
+                            <input type="checkbox" id="incluir_simbolos">
+                        </div>
+                    </div>
+                    <!-- hasta aqui los checkboxes -->
+                    <div>
+                        <div id="selector_longitud_contraseña">
+                            <label for="longitud_contraseña">Longitud:</label>
+                            <input id="longitud_contraseña" type="number" min="6" max="20" value="6">
+                        </div>
+                        
+                        <div id="botones_contraseña">
+
+                            <button id="generar_contraseña" onclick="generarContraseña()">Generar</button>
+                            <button id="copiar_contraseña" onclick="copiarContraseña()">Copiar</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+        </section>
+<!-- ------------------------------------------------------------------------------ -->
+<!-- modo oscuro -->
+        <section id="modo_oscuro" class="seccion hidden">
+
+            <h2>Modo Oscuro</h2>
+            <button id="boton_modo_oscuro" onclick="toggleModoOscuro()">🌙</button>
+
+        </section>
+<!-- --------------------------------------------------------------- -->
+<!-- piedrapapeltijeras -->
+    
+        <section id="piedra_papel_tijera" class="seccion hidden">
+
+            <h2>Piedra, Papel o Tijera</h2>
+            <div id="cpu_piedra_papel_tijera">❓</div>
+
+            <p id="resultado_piedra_papel_tijera">esperando...</p>
+
+            <div id="marcador">
+                <p>Jugador: <span id="marcador_jugador">0</span></p>
+                <p>CPU: <span id="marcador_cpu">0</span></p>
+            </div>
+            <button onclick="reiniciarMarcador()" id="reiniciar_marcador">Reiniciar Marcador</button>
+
+            <div id="botones_piedra_papel_tijera">
+                <button onclick="jugarPiedraPapelTijera('1')">✊</button>
+                <button onclick="jugarPiedraPapelTijera('2')">✋</button>
+                <button onclick="jugarPiedraPapelTijera('3')">✌️</button>
+            </div>
+        </section>
+
+<!-- --------------------------------------------------------------- -->
+<!-- galeria -->
+        <section id="galeria_imagenes" class="seccion hidden"> 
+
+            <div id ="galeria_de_imagenes">
+
+                <nav id="filtros">
+                    <div id="filtro_busqueda_img">
+                        <input type="text" id="filtro_input" placeholder="Buscar por nombre...">
+                        <button onclick="buscarImagenes()">Buscar</button>
+
+                    </div>
+
+                    <hr>
+
+                    <p onclick="filtrarPorCategoria('todos')">Todos</p>
+                    <p onclick="filtrarPorCategoria('animales')">Animales</p>
+                    <p onclick="filtrarPorCategoria('tecnologia')">Tecnologia</p>
+                    <p onclick="filtrarPorCategoria('naturaleza')">Naturaleza</p>
+
+                    <hr>
+
+                </nav>
+
+                <div class="galeria">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZK9Lfy8c9nvYe9nB2WinBu6nmCQaCAXVkw&s" alt="Imagen caballo" class="imagen_galeria todos animales caballo haru"      onclick="abrirModalImagen('haru')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSphy2xZW92IShyYmezqkJGTKvGwx8hWufvQ&s" alt="Imagen juan"    class="imagen_galeria todos animales caballo juan"      onclick="abrirModalImagen('juan')">
+                    <img src="https://i.pinimg.com/736x/ed/52/fa/ed52faa044f95e85bf946efa2d116b7f.jpg"                      alt="Imagen maxwel"  class="imagen_galeria todos animales gato maxwel"       onclick="abrirModalImagen('maxwel')">
+                    <img src="https://exterminatek.ca/wp-content/uploads/2017/07/souris-1.jpg"                              alt="Imagen raton"   class="imagen_galeria todos animales raton"             onclick="abrirModalImagen('raton')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVGhkCib6GmB03AFls5t5XlJ5cH1GEiMRog&s" alt="Imagen casuario"class="imagen_galeria todos animales ave casuario"      onclick="abrirModalImagen('casuario')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy5wyi2bpbASLuCMSxQ8XGAaFR6uQnfyLd4Q&s" alt="Imagen canaima" class="imagen_galeria todos tecnologia laptop canaima"  onclick="abrirModalImagen('canaima')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"              alt="Imagen mouse"   class="imagen_galeria todos tecnologia raton mouse"     onclick="abrirModalImagen('mouse')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjtAoUaMhOvNr3QlVcY9K86jrlyTYFESErw&s" alt="Imagen flor"    class="imagen_galeria todos naturaleza flor"            onclick="abrirModalImagen('flor')">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5eokDRB6j3_eWR4KBXTg4vG-ZcS2gT16WQ&s" alt="Imagen hongo"   class="imagen_galeria todos naturaleza hongo"           onclick="abrirModalImagen('hongo')">
+                </div>
+
+            </div>
+        </section>
+
+<!-- --------------------------------------------------------------- -->
+<!-- modal de la galeria -->
+
+        <section class="modal hidden" id="modal_imagen">
+
+            <button onclick="cerrarModal()" class="buttonX">X</button>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZK9Lfy8c9nvYe9nB2WinBu6nmCQaCAXVkw&s" alt="Imagen caballo" class="imagen_galeria_2 animales  " id="haru"      onclick="abrirModal('haru')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSphy2xZW92IShyYmezqkJGTKvGwx8hWufvQ&s" alt="Imagen juan"    class="imagen_galeria_2 animales  " id="juan"      onclick="abrirModal('juan')">
+            <img src="https://i.pinimg.com/736x/ed/52/fa/ed52faa044f95e85bf946efa2d116b7f.jpg"                      alt="Imagen maxwel"  class="imagen_galeria_2 animales  " id="maxwel"    onclick="abrirModal('maxwel')">
+            <img src="https://exterminatek.ca/wp-content/uploads/2017/07/souris-1.jpg"                              alt="Imagen raton"   class="imagen_galeria_2 animales  " id="raton"     onclick="abrirModal('raton')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiVGhkCib6GmB03AFls5t5XlJ5cH1GEiMRog&s" alt="Imagen casuario"class="imagen_galeria_2 animales  " id="casuario"  onclick="abrirModal('casuario')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy5wyi2bpbASLuCMSxQ8XGAaFR6uQnfyLd4Q&s" alt="Imagen canaima" class="imagen_galeria_2 tecnologia" id="canaima"   onclick="abrirModal('canaima')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/3-Tasten-Maus_Microsoft.jpg"              alt="Imagen mouse"   class="imagen_galeria_2 tecnologia" id="raton"     onclick="abrirModal('mouse')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjtAoUaMhOvNr3QlVcY9K86jrlyTYFESErw&s" alt="Imagen flor"    class="imagen_galeria_2 naturaleza" id="flor"      onclick="abrirModal('flor')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ5eokDRB6j3_eWR4KBXTg4vG-ZcS2gT16WQ&s" alt="Imagen hongo"   class="imagen_galeria_2 naturaleza" id="hongo"     onclick="abrirModal('hongo')">
+
+        </section>
+
+        <div class="overlay hidden"></div>
+
+        <section class="modal hidden" id="modal_menu">
+            
+            <div id="modal_menu_container">
+
+                <button onclick="cerrarModalMenu()" class="buttonX">X</button>
+
+                <button onclick="mostrarSeccion('contador_interactivo')"     class="boton_menu">Contador interactivo</button>
+                <button onclick="mostrarSeccion('lista_de_tareas')"          class="boton_menu">Lista de tareas</button>
+                <button onclick="mostrarSeccion('adivinar_numero')"          class="boton_menu">Adivinar numero</button>
+                <button onclick="mostrarSeccion('calculadora')"              class="boton_menu">Calculadora</button>
+                <button onclick="mostrarSeccion('cambia_colores')"           class="boton_menu">Cambia colores</button>
+                <button onclick="mostrarSeccion('temporizador')"             class="boton_menu">Temporizador</button>
+                <button onclick="mostrarSeccion('generador_de_contraseñas')" class="boton_menu">Generador de contraseñas</button>
+                <button onclick="mostrarSeccion('modo_oscuro')"              class="boton_menu">Modo oscuro</button>
+                <button onclick="mostrarSeccion('piedra_papel_tijera')"      class="boton_menu">Piedra papel tijera</button>
+                <button onclick="mostrarSeccion('galeria_imagenes')"         class="boton_menu">galeria de imagenes </button>
+
+
+            </div>
+        
+        </section>
+    </main>
+
+
+
+    <footer>
+        <p>David Méndez -2026 a <a href="https://github.com/crichopia" target="_blank">github</a> <a href="https://github.com/crichopia/Mis-10-Proyectos-JS" target="_blank">repositorio</a></p>
+    </footer>
+    <script src="scripts.js"></script>
+
+
+</body>
+
+</html>
